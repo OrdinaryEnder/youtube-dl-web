@@ -6,7 +6,7 @@ services:
       dockerfile: nginx/Dockerfile.nossl # change "nossl" to "ssl" for SSL support
     ports:
       - "80:80"
-      # - "443:443" # uncomment for SSL support
+      - "443:443" # uncomment for SSL support
     restart: unless-stopped
   server:
     build: server
