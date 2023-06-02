@@ -1,7 +1,7 @@
 from alpine:latest
 
-WORKDIR /app
+WORKDIR /app/
 
-RUN ls
-RUN chmod +x /app/start.sh
+
+RUN chmod +x start.sh
 CMD ["start.sh"]
