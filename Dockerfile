@@ -4,9 +4,11 @@ WORKDIR /app
 
 COPY . /app
 
-RUN apk add --update docker openrc
+RUN apk add --update docker openrc docker-compose 
 
 RUN rc-update add docker boot
+
+RUN rc-service docker start
 
 WORKDIR frontend
 
