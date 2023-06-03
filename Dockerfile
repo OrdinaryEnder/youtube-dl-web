@@ -4,8 +4,12 @@ WORKDIR /app
 
 COPY . /app
 
-RUN chmod +x start.sh
+WORKDIR frontend
+
+RUN sh build.sh
+
+
 
 EXPOSE 80
 
-CMD ["/bin/sh", "start.sh"]
+CMD ["docker-compose", "up", "-d", "--build"]
