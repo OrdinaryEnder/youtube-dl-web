@@ -1,4 +1,4 @@
-from alpine:latest
+FROM alpine:latest
   
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN apk add --update docker openrc docker-compose
 
 RUN rc-update add docker boot
 
-RUN rc-service docker start
+
 
 WORKDIR frontend
 
